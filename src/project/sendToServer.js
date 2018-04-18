@@ -11,14 +11,14 @@ export default class ServerApi {
         this.sendToServer(name);
         this._dispatcher.dispatch({
           type: 'newEvent',
-          event: `Отправка на сервер, имя ${name}`,
+          event: `Отправка данных на сервер, имя ${name}`,
         });
       }
     });
   }
 
   sendToServer(data) {
-    Logger.console(`Отправляем на сервер имя ${data}`);
+    Logger.console(`Отправляем данные на сервер, имя ${data}`);
 
     this._dispatcher.dispatch({
       type: 'serverSent',

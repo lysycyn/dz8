@@ -1,3 +1,7 @@
+/**
+ * @class Store - хранилище данных. Единственний достоверный источник данных
+ * для всего приложения. Происходит привязка редюсеров, отвечающих за изменение стора к определенным экшенам,
+ */
 export default class Store {
   constructor(defaultStore, reducer, dispatcher, emitter) {
     this._store = defaultStore;
